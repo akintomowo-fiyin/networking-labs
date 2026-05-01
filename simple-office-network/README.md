@@ -1,15 +1,15 @@
 # simple-office-network
 Cisco Packet Tracer simulation
 
-##Overview
+## Overview
 This project simulates a simple office network
 
-##Features
+## Features
 -
-##Tool Used
+## Tool Used
 - Cisco Packet Tracer
   
-##How to use
+## How to use
 1. Download the .pkt file
 2. Open in Cisco Packet Tracer
 3. Use simulation mode to observe traffic
