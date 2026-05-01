@@ -2,14 +2,13 @@
 Cisco Packet Tracer simulations
 
 ## Overview
-This project simulates various Network topology
+This repository contains my Cisco Packet Tracer simulations covering core networking concepts.
 
-## Features
+## Projects
+- Simple Office Network
 
-## Tool Used 
-- Cisco Packet Tracer
-  
-## How to use
-1. Download the .pkt file
-2. Open in Cisco Packet Tracer
-3. Use simulation mode to observe traffic
+## Sills Demonstrated
+- IP Addressing
+- Routing Protocols (OSPF, RIP)
+- VLAN Configuration
+- Troubleshooting
