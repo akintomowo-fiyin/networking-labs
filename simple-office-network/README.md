@@ -1,4 +1,4 @@
-# networking-labs
+# simple-office-network
 Cisco Packet Tracer simulation
 
 ##Overview
