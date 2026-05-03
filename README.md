@@ -6,9 +6,9 @@ This repository contains my Cisco Packet Tracer simulations covering core networ
 
 ## Projects
 - Simple Office Network
+- Office network
 
-## Sills Demonstrated
+## Siklls Demonstrated
 - IP Addressing
-- Routing Protocols (OSPF, RIP)
+- Routing Protocols
 - VLAN Configuration
-- Troubleshooting
