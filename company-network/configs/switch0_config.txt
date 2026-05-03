@@ -1,0 +1,29 @@
+# ================================
+# DEVICE: Switch0 (Layer 2 Switch)
+# ================================
+
+hostname Switch
+
+# ------ VLAN CREATION -----------
+
+vlan 10
+interface range FastEthernet0/2-4
+ switchport mode access
+ switchport access vlan 10
+
+vlan 20
+interface range FastEthernet0/5-7
+ switchport mode access
+ switchport access vlan 20
+
+vlan 30
+interface range FastEthernet0/8-10
+ switchport mode access
+ switchport access vlan 30
+
+
+# -------- TRUNK PORT --------
+interface GigabitEthernet0/1
+ switchport mode trunk
+
+# -------- END OF CONFIG --------
