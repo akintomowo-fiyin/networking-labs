@@ -1,0 +1,54 @@
+# ================================
+# DEVICE: R1 (Router)
+# PROJECT: Inter-VLAN Routing Lab
+# ================================
+
+# Description:
+# This configuration implements Router-on-a-Stick using subinterfaces on Router to enable
+# inter-VLAN routing for VLANs 10, 20, and 30. Each VLAN is assigned a dedicated subnet,
+# and DHCP services are configured on the router to dynamically assign IP addresses
+# to hosts within each VLAN.
+
+
+hostname Router
+
+# -------- INTERFACES --------
+interface GigabitEthernet0/0
+ no shutdown
+
+# -------- SUB INTERFACE (ROUTER-ON-A-STICK)  ------
+
+interface GigabitEthernet0/0.10
+encapsulate dot1Q 10
+ip address 192.168.1.1 255.255.255.192
+
+interface GigabitEthernet0/0.20
+encapsulate dot1Q 20
+ip address 192.168.1.65 255.255.255.192
+
+interface GigabitEthernet0/0.30
+encapsulate dot1Q 30
+ip address 192.168.1.129 255.255.255.192
+
+# -------- DHCP CONFIG  --------
+service dhcp
+
+ip dhcp pool Admin-Pool
+ network 192.168.1.0 255.255.255.192
+ default-router 192.168.1.1
+ dns-server 192.168.1.1
+ domain-name Admin.com
+
+ip dhcp pool Finance-Pool
+ network 192.168.1.64 255.255.255.192
+ default-router 192.168.1.65
+ dns-server 192.168.1.65
+ domain-name Finance.com
+
+ip dhcp pool Service-Pool
+ network 192.168.1.128 255.255.255.192
+ default-router 192.168.1.129
+ dns-server 192.168.1.129
+ domain-name Service.com
+
+# -------- END OF CONFIG --------
