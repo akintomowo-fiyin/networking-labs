@@ -2,27 +2,47 @@
 # DEVICE: Switch0 (Layer 2 Switch)
 # ================================
 
+# Description:
+# Base Network: 192.168.1.0/24
+# VLAN 10 → 192.168.1.0/26   (Admin)
+# VLAN 20 → 192.168.1.64/26  (Finance)
+# VLAN 30 → 192.168.1.128/26 (Service)
+
 hostname Switch
 
-# ------ VLAN CREATION -----------
+# ================================
+# VLAN CONFIGURATION
+# ================================
 
 vlan 10
+ name ADMIN
+
+vlan 20
+ name FINANCE
+
+vlan 30
+ name SERVICE
+
+# ================================
+# ACCESS PORT ASSIGNMENT
+# ================================
+
 interface range FastEthernet0/2-4
  switchport mode access
  switchport access vlan 10
 
-vlan 20
 interface range FastEthernet0/5-7
  switchport mode access
  switchport access vlan 20
 
-vlan 30
 interface range FastEthernet0/8-10
  switchport mode access
  switchport access vlan 30
 
+# ================================
+# TRUNK PORT (TO ROUTER)
+# ================================
 
-# -------- TRUNK PORT --------
 interface GigabitEthernet0/1
  switchport mode trunk
 
