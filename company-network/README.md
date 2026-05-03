@@ -29,8 +29,8 @@ A base network of 192.168.1.0/24 is subnetted into /26 networks to support three
 - Networking concepts (VLANs, Subnetting, Routing)
 
 ## 📂 Configuration Files
-- Router configuration: `configs/R1_config.txt`
-- Switch configuration: `configs/S1_config.txt`
+- Router configuration: `configs/router0_config.txt`
+- Switch configuration: `configs/switch0_config.txt`
 
 ## ▶️ How to Run
 1. Open the `.pkt` file in Cisco Packet Tracer
