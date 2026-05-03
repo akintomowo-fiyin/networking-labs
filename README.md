@@ -5,8 +5,7 @@ Cisco Packet Tracer simulations
 This repository contains my Cisco Packet Tracer simulations covering core networking concepts.
 
 ## Projects
-- Simple Office Network
-- Office network
+- Company Network
 
 ## Siklls Demonstrated
 - IP Addressing
