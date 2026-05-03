@@ -1,1 +1,27 @@
+#===============================
+# DEVICE: router0 (Router)
+#===============================
 
+# Description:
+# This configuration sets up a Layer 3 device with two active interfaces,
+# each assigned to a different subnet derived from the base network 192.168.40.0/24.
+# The device performs routing between the two networks, enabling communication
+# between hosts on separate subnets.
+
+hostname router
+
+# -------- INTERFACES --------
+interface range GigabitEthernet0/0-1
+no shutdown
+
+interface GigabitEthernet0/0
+ip address 192.168.40.1 255.255.255.128
+
+interface GigabitEthernet0/1
+ip address 192.168.40.129 255.255.255.128
+
+# -------- ROUTING --------
+# (Only needed if this is a Layer 3 switch)
+ip routing
+
+# -------- END OF CONFIG --------
