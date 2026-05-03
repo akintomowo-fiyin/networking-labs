@@ -4,6 +4,8 @@
 # ================================
 
 # Description:
+# Base Network: 192.168.1.0/24
+# Subnetted into /26 networks for VLAN 10, 20, and 30.
 # This configuration implements Router-on-a-Stick using subinterfaces on Router to enable
 # inter-VLAN routing for VLANs 10, 20, and 30. Each VLAN is assigned a dedicated subnet,
 # and DHCP services are configured on the router to dynamically assign IP addresses
